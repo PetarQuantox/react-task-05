@@ -1,0 +1,72 @@
+.header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #94C5CC;
+
+
+    .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        
+        @include respond-to(phone) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    .logo {
+        margin: auto 0;
+        font-size: 2.2rem;
+
+        @include respond-to(phone) {
+            text-align: center;
+            padding: 1rem 0;
+        }
+    }
+    .navbar {
+        list-style: none;
+        margin: 0 0 0 auto;
+
+        @include respond-to(phone) {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        li {
+             display: inline-block;
+             font-size: 2rem;
+             margin: 0 1rem;
+             @include respond-to(phone) {
+                margin: 0;
+                font-size: 1.4rem;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+             
+             a{
+                 display: block;
+                 padding: 2rem 1rem;
+                 text-decoration: none;
+                 color: #333;
+                 
+                &:hover {
+                    background: darken($color: #94C5CC, $amount: 5)
+                }
+
+                @include respond-to(phone) {
+                text-align: center;
+                }
+             }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto 0 auto;
+    padding: 5rem;
+
+    @include respond-to(phone) {
+        padding: 0;
+    }
+
+    .registred-user {
+        display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 2rem;
+        font-size: 2rem;
+        align-items: center;
+        -webkit-box-shadow: 5px 5px 34px 1px rgba(199,197,199,1);
+        -moz-box-shadow: 5px 5px 34px 1px rgba(199,197,199,1);
+        box-shadow: 5px 5px 34px 1px rgba(199,197,199,1);
+
+        span {
+            font-size: 1.4rem;
+        }
+        a {
+            margin-left: auto;
+            font-size: 1.5rem;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}
